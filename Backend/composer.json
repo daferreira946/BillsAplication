@@ -1,0 +1,18 @@
+{
+  "name": "daferreira946/web",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Daferreira946",
+      "email": "daferreira1996@icloud.com"
+    },
+    {
+      "name": "JoaoVictor",
+      "email": "joao.victor74@hotmail.com"
+    }
+  ],
+  "require": {
+  }
+}
