@@ -2,42 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9762a57-0b17-4c6c-a2cb-6f7ec279f7c9" name="Default Changelist" comment="Backend finished">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/.styleci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/app/Http/Controllers/BillController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/app/Models/Bill.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/artisan" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/bootstrap/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/database/factories/BillFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/database/migrations/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/database/migrations/2020_12_06_203000_create_bills_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/database/seeders/BillsSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/dbconfigs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/create_bills_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/create_database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/storage/logs/lumen-2020-12-07.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/vendor/autoload.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/ClassLoader.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/autoload_classmap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/autoload_namespaces.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/autoload_psr4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/autoload_real.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/autoload_static.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +77,17 @@
       <option name="presentableId" value="Default" />
       <updated>1607278863494</updated>
       <workItem from="1607278864642" duration="5834000" />
-      <workItem from="1607284750773" duration="15943000" />
+      <workItem from="1607284750773" duration="16340000" />
+      <workItem from="1607378916998" duration="2347000" />
     </task>
+    <task id="LOCAL-00001" summary="Backend finished">
+      <created>1607304499640</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607304499640</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,0 +1,11 @@
+[2020-12-07 01:27:25] local.ERROR: Undefined variable: router {"exception":"[object] (ErrorException(code: 0): Undefined variable: router at C:\\Users\\T-Gamer\\Desktop\\web\\Backend\
+outes\\web.php:16)
+[stacktrace]
+#0 C:\\Users\\T-Gamer\\Desktop\\web\\Backend\
+outes\\web.php(16): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(8, 'Undefined varia...', 'C:\\\\Users\\\\T-Game...', 16, Array)
+#1 C:\\Users\\T-Gamer\\Desktop\\web\\Backend\\bootstrap\\app.php(112): require('C:\\\\Users\\\\T-Game...')
+#2 C:\\Users\\T-Gamer\\Desktop\\web\\Backend\\vendor\\laravel\\lumen-framework\\src\\Routing\\Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#3 C:\\Users\\T-Gamer\\Desktop\\web\\Backend\\bootstrap\\app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#4 C:\\Users\\T-Gamer\\Desktop\\web\\Backend\\public\\index.php(14): require('C:\\\\Users\\\\T-Game...')
+#5 {main}
+"}
