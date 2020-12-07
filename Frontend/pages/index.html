@@ -6,6 +6,7 @@
         <title>Financeiro</title>
         <!-- CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     </head>
     <body>
         <header>
@@ -22,14 +23,14 @@
             <div id="container">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 mt-3">
-                            <table class="table table-hover table-striped">
+                        <div id="tabela" class="col-12 mt-3">
+                            <table  class="table table-hover table-striped">
                                 <thead class="thead-dark">
                                   <tr>
                                     <th>Data</th>
                                     <th>Descrição</th>
                                     <th>Tipo</th>
-                                    <th>Value</th>
+                                    <th>Valor</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -75,13 +76,13 @@
                                         <div class="mt-5">
                                                 <legend class="col-form-label col-sm-2 p-0">Tipo</legend> 
                                                 <div class="form-check mt-2">                                                                                    
-                                                    <input class="form-check-input" type="radio" name="tipo" id="credito" value="credito" required>
+                                                    <input class="form-check-input" type="radio" name="tipo" id="credito" value="0" required>
                                                     <label class="form-check-label" for="credito">
                                                     Credito
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="tipo" id="debito" value="debito">
+                                                    <input class="form-check-input" type="radio" name="tipo" id="debito" value="1">
                                                     <label class="form-check-label" for="debito">
                                                     Debito
                                                     </label>
@@ -112,5 +113,19 @@
         <!-- JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <script>    
+            var tabela = new vue({
+                el: '#tabela',
+                data: {
+                    entrada:[{
+                        data,
+                        descricao,
+                        tipo,
+                        valor}]
+                }
+            });
+        </script>
     </body>
 </html>
