@@ -10,5 +10,6 @@
     <orderEntry type="library" name="react-dom" level="application" />
     <orderEntry type="library" name="babel-standalone" level="application" />
     <orderEntry type="library" name="axios" level="application" />
+    <orderEntry type="library" name="vue" level="application" />
   </component>
 </module>

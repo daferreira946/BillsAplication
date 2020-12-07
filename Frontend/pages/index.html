@@ -148,7 +148,6 @@
                 created(){
                     axios.get('http://localhost:8000/bills',{
                     headers: {
-                        'Access-Control-Allow-Origin': '*',
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     }})
@@ -171,7 +170,6 @@
                     novo(){
                         axios.post('http://localhost:8000/bills',{
                     headers: {
-                        'Access-Control-Allow-Origin': '*',
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     }})
