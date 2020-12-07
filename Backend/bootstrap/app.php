@@ -76,7 +76,7 @@ $app->configure('app');
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-$app->middleware([
+$app->routeMiddleware([
     App\Http\Middleware\CorsMiddleware::class
 ]);
 
