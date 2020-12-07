@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9762a57-0b17-4c6c-a2cb-6f7ec279f7c9" name="Default Changelist" comment="" />
+    <list default="true" id="f9762a57-0b17-4c6c-a2cb-6f7ec279f7c9" name="Default Changelist" comment="Backend finished">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/.styleci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/app/Http/Controllers/BillController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/app/Models/Bill.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/artisan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/bootstrap/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/database/factories/BillFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/database/migrations/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/database/migrations/2020_12_06_203000_create_bills_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/database/seeders/BillsSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/dbconfigs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/create_bills_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/create_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/vendor/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/ClassLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/autoload_classmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/autoload_namespaces.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/autoload_psr4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/autoload_real.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/vendor/composer/autoload_static.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -15,33 +52,55 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lIJqNDU1btE1pHZLMdi2RdNPO2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend/app/Http/Controllers" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
-      <method v="2" />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\T-Gamer\Desktop\web\Backend\app\Http\Controllers" />
+      <recent name="C:\Users\T-Gamer\Desktop\web\Backend\app\Models" />
+      <recent name="C:\Users\T-Gamer\Desktop\web\Backend\database\factories" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\T-Gamer\Desktop\web\Backend" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -51,11 +110,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607278863494</updated>
-      <workItem from="1607278864642" duration="1009000" />
+      <workItem from="1607278864642" duration="5834000" />
+      <workItem from="1607284750773" duration="15943000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Backend finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backend finished" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

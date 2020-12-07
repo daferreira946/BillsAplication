@@ -2,9 +2,13 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/composer" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend2" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="react" level="application" />
+    <orderEntry type="library" name="react-dom" level="application" />
+    <orderEntry type="library" name="babel-standalone" level="application" />
+    <orderEntry type="library" name="axios" level="application" />
   </component>
 </module>
