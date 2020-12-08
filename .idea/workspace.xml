@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9762a57-0b17-4c6c-a2cb-6f7ec279f7c9" name="Default Changelist" comment="adding provider" />
+    <list default="true" id="f9762a57-0b17-4c6c-a2cb-6f7ec279f7c9" name="Default Changelist" comment="changing CorsMiddleware type">
+      <change beforePath="$PROJECT_DIR$/.idea/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/pages/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,6 +70,16 @@
       <recent name="C:\Users\T-Gamer\Desktop\web\Backend" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.rest-api#1" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -78,6 +93,7 @@
       <workItem from="1607378916998" duration="2347000" />
       <workItem from="1607381303357" duration="321000" />
       <workItem from="1607382167901" duration="1073000" />
+      <workItem from="1607384054344" duration="1316000" />
     </task>
     <task id="LOCAL-00001" summary="Backend finished">
       <created>1607304499640</created>
@@ -107,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607383239530</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changing CorsMiddleware type">
+      <created>1607384288642</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607384288642</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,7 +153,8 @@
     <MESSAGE value="Backend finished" />
     <MESSAGE value="fixing cross-origin problem" />
     <MESSAGE value="adding provider" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding provider" />
+    <MESSAGE value="changing CorsMiddleware type" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing CorsMiddleware type" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
