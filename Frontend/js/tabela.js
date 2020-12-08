@@ -5,9 +5,7 @@ var formatter = new Intl.NumberFormat('pt-BR', {
 var tabela = new Vue({
     el: '#tabela',
     data: {
-        entradas:[],
-        currentPage: 1,
-        pageCount: 0
+        entradas:[],        
     },
     methods:{
         reverseString(str) {
@@ -28,6 +26,11 @@ var tabela = new Vue({
                     console.log(res);
                     this.listarEntradas();})
                 .catch(err => console.log(err));  
+        },recuperaPagina(n){
+            axios.get(`http://localhost:8000/bills?page=${n}`)
+                .then(res =>                   
+                    this.entradas = res.data)
+                .catch(err => console.log(err));
         }
     },
     created(){

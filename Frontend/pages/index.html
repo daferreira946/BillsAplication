@@ -24,64 +24,9 @@
             <div id="container">
                 <div class="container">
                     <div   class="row">
-                        <!-- Tabela -->
-                        <div id="tabela">
-                            <div  class="col-12 mt-3">
-                                <table  class="table table-hover table-striped">
-                                    <thead class="thead-dark">
-                                    <tr>
-                                        <th class="w-15">Data</th>
-                                        <th class="w-40">Descrição</th>
-                                        <th class="w-15">Tipo</th>
-                                        <th class="w-15">Valor</th>
-                                        <th class="w-15">Opções</th>
-
-                                    </tr>
-                                    </thead>
-                                    <tbody  v-for="entrada in entradas.bills">
-                                    <tr>
-                                        <td>{{reverseString(entrada.date)}}</td>
-                                        <td>{{entrada.description}}</td>
-                                        <td>{{entrada.type == 0 ? "credito":"debito"}}</td>
-                                        <td>{{format(entrada.value)}}</td>
-                                        <td class="d-flex">
-                                            <button v-on:click="novaEntrada.editar(entrada.id)" class="btn btn-primary mr-1" data-toggle="modal" data-target="#entrada-modal">
-                                                Editar
-                                            </button>
-                                            <button v-on:click="deletar(entrada.id)"class="btn btn-danger">
-                                                Deletar
-                                            </button>
-                                        </td>
-                                    </tr>                                  
-                                    </tbody>
-                                </table>  
-                                <!-- Paginação -->    
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" >Previous</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link">Next</a></li>
-                                    </ul>
-                                </nav>                      
-                            </div>
-                            <!-- Saldo -->
-                            <div class="col-12 mt-5">
-                                <table class="table table-hover table-bordered">                                
-                                    <tbody class="thead-dark">
-                                    <tr> 
-                                        <th>Saldo</th>                                   
-                                        <td>{{ format(entradas.total) }}</td>
-                                    </tr>                                  
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                                                 
                         <div id="nova-entrada">
                             <!-- Btn Nova Entrada -->
-                            <div class="col-12">
+                            <div class="col-12 mt-5">
                                 <button class="btn btn-primary" v-on:click="limpaForm()" data-toggle="modal" data-target="#entrada-modal">Nova entrada</button>
                             </div>  
                             <!-- Modal do formulario de novas entradas -->
@@ -147,6 +92,62 @@
                                         </div>                                
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <!-- Tabela -->
+                        <div id="tabela">
+                            <div  class="col-12 mt-3">
+                                <table  class="table table-hover table-striped">
+                                    <thead class="thead-dark">
+                                    <tr>
+                                        <th class="w-15">Data</th>
+                                        <th class="w-40">Descrição</th>
+                                        <th class="w-15">Tipo</th>
+                                        <th class="w-15">Valor</th>
+                                        <th class="w-15">Opções</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody  v-for="entrada in entradas.bills">
+                                    <tr>
+                                        <td>{{reverseString(entrada.date)}}</td>
+                                        <td>{{entrada.description}}</td>
+                                        <td>{{entrada.type == 0 ? "credito":"debito"}}</td>
+                                        <td>{{format(entrada.value)}}</td>
+                                        <td class="d-flex">
+                                            <button v-on:click="novaEntrada.editar(entrada.id)" class="btn btn-primary mr-1" data-toggle="modal" data-target="#entrada-modal">
+                                                Editar
+                                            </button>
+                                            <button v-on:click="deletar(entrada.id)"class="btn btn-danger">
+                                                Deletar
+                                            </button>
+                                        </td>
+                                    </tr>                                  
+                                    </tbody>
+                                </table>  
+                                <!-- Paginação -->    
+                                <nav v-if="entradas.pages">
+                                    <ul class="pagination">
+                                    <li class="page-item" v-on:click="recuperaPagina(entradas.pages.previousPage)"><button class="page-link" >Anterior</button></li>
+                                      
+                                    <li v-if="entradas.pages.currentPage > 1"v-on:click="recuperaPagina(entradas.pages.previousPage)" class="page-item"><button class="page-link" href="#">{{entradas.pages.previousPage}}</button></li>                        
+                                    <li class="page-item active"><button class="page-link" href="#" >{{entradas.pages.currentPage}}</button></li>
+                                    <li v-if="entradas.pages.nextPage != entradas.pages.currentPage" v-on:click="recuperaPagina(entradas.pages.nextPage)"class="page-item"><button class="page-link" href="#">{{entradas.pages.nextPage}}</button></li> 
+                            
+                                    <li class="page-item" v-on:click="recuperaPagina(entradas.pages.nextPage)"><button class="page-link">Proxima</button></li>
+                                    </ul>
+                                </nav>                      
+                            </div>
+                            <!-- Saldo -->
+                            <div class="col-12 mt-5">
+                                <table class="table table-hover table-bordered">                                
+                                    <tbody class="thead-dark">
+                                    <tr> 
+                                        <th>Saldo</th>                                   
+                                        <td>{{ format(entradas.total) }}</td>
+                                    </tr>                                  
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
