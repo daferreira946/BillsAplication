@@ -5,11 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Financeiro</title>
         <!-- CSS -->
+        <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <!-- Vue -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     </head>
     <body>
         <header>
+            <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="index.html">Financeiro</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,16 +24,17 @@
             <div id="container">
                 <div class="container">
                     <div   class="row">
+                        <!-- Tabela -->
                         <div id="tabela">
                             <div  class="col-12 mt-3">
                                 <table  class="table table-hover table-striped">
                                     <thead class="thead-dark">
                                     <tr>
-                                        <th style="width: 15%">Data</th>
-                                        <th style="width: 40%">Descrição</th>
-                                        <th style="width: 15%">Tipo</th>
-                                        <th style="width: 15%">Valor</th>
-                                        <th style="width: 15%">Opções</th>
+                                        <th class="w-15">Data</th>
+                                        <th class="w-40">Descrição</th>
+                                        <th class="w-15">Tipo</th>
+                                        <th class="w-15">Valor</th>
+                                        <th class="w-15">Opções</th>
 
                                     </tr>
                                     </thead>
@@ -50,7 +54,8 @@
                                         </td>
                                     </tr>                                  
                                     </tbody>
-                                </table>      
+                                </table>  
+                                <!-- Paginação -->    
                                 <nav aria-label="Page navigation example">
                                     <ul class="pagination">
                                     <li class="page-item"><a class="page-link" >Previous</a></li>
@@ -61,6 +66,7 @@
                                     </ul>
                                 </nav>                      
                             </div>
+                            <!-- Saldo -->
                             <div class="col-12 mt-5">
                                 <table class="table table-hover table-bordered">                                
                                     <tbody class="thead-dark">
@@ -74,10 +80,11 @@
                         </div>
                                                  
                         <div id="nova-entrada">
+                            <!-- Btn Nova Entrada -->
                             <div class="col-12">
                                 <button class="btn btn-primary" v-on:click="limpaForm()" data-toggle="modal" data-target="#entrada-modal">Nova entrada</button>
                             </div>  
-                            <!-- Modal -->
+                            <!-- Modal do formulario de novas entradas -->
                             <div class="modal fade" id="entrada-modal" tabindex="-1" role="dialog">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
@@ -146,6 +153,7 @@
                 </div>                    
             </div>
         </main>
+        <!-- Footer -->
         <footer class="my-4 pt-5 text-muted text-center text-small">
             <p class="mb-1">Financeiro 2020</p> 
             <p class="mb-1">Daniel de Assis Ferreira</p>  
@@ -155,121 +163,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" crossorigin="anonymous"></script>
-
-        <script> 
-            function modalToggle(){
-                $('#entrada-modal').modal('toggle');
-            }
-            var formatter = new Intl.NumberFormat('pt-BR', {
-                style: 'currency',
-                currency: 'BRL'
-            });   
-            var tabela = new Vue({
-                el: '#tabela',
-                data: {
-                    entradas:[],
-                    currentPage: 1,
-                    pageCount: 0
-                },
-                methods:{
-                    reverseString(str) {
-                        return str.split('-').reverse().join('-').replaceAll('-','/');
-                    }
-                    ,                    
-                    format(val){
-                        return formatter.format(val);
-                    },
-                    listarEntradas(){
-                        axios.get('http://localhost:8000/bills')
-                        .then(res => this.entradas = res.data)
-                        .catch(err => console.log(err)); 
-                    }
-                    ,deletar(id){
-                        axios.delete(`http://localhost:8000/bills/${id}`)
-                            .then(res => {
-                                console.log(res);
-                                this.listarEntradas();})
-                            .catch(err => console.log(err));  
-                    }
-                },
-                created(){
-                     this.listarEntradas();                  
-                }
-
-            });
-            var novaEntrada = new Vue({
-                el: '#nova-entrada',
-                data: {                    
-                    formEntradas:  
-                        {id:"0",date:null,description:null,type:null,value:null},              
-                    erros:[]                    
-                },
-                methods:{
-                    salvar(){
-                        if(this.checkForm()){
-                            let dados = new FormData();
-                            console.log(this.formEntradas);
-                                
-                            for (let i in this.formEntradas){
-                                dados.append(i,this.formEntradas[i]);
-                            }
-                            console.log('FormData dados :'); 
-                            for(var pair of dados.entries()) {
-                                console.log(pair[0]+ ':'+ pair[1]); 
-                            }
-                            
-                            if(this.formEntradas.id != 0){
-                                dados.append('_method','patch');
-                                axios.post(`http://localhost:8000/bills/${this.formEntradas.id}`,dados)
-                                .then(res => {
-                                    console.log(res);})
-                                .catch(err => console.log(err));
-                            
-                            }else{
-                                axios.post('http://localhost:8000/bills',dados)
-                                .then(res => {
-                                    console.log(res);})
-                                .catch(err => console.log(err));
-                            }
-                            this.limpaForm();
-                            tabela.listarEntradas();
-                            modalToggle();                        
-                            
-                        }
-                    },
-                    editar(id){
-                            axios.get(`http://localhost:8000/bills/${id}`)
-                            .then(res => this.formEntradas = res.data.bill)
-                            .catch(err => console.log(err));  
-                            
-                    },                    
-                    checkForm() {
-                        if (this.formEntradas.date && this.formEntradas.description && this.formEntradas.value) {
-                            if(this.formEntradas.type != null)
-                                return true;
-                        }
-
-                        this.erros = [];
-
-                        if (!this.formEntradas.date) {
-                            this.erros.push('O campo Data é obrigatório !');
-                        }
-                        if (!this.formEntradas.description) {
-                            this.erros.push('O campo Descrição é obrigatório !');
-                        }
-                        if (!this.formEntradas.value) {
-                            this.erros.push('O campo Valor é obrigatório !');
-                        }
-                        if (!this.formEntradas.type) {
-                            this.erros.push('O campo Tipo é obrigatório !');
-                        }
-                    },
-                    limpaForm(){
-                            this.formEntradas = {id:"0",date:null,description:null,type:null,value:null};
-                            this.erros = [];
-                    }
-                }
-            });
-        </script>
+        <script src="../js/tabela.js"></script>
+        <script src="../js/nova-entrada.js"></script>        
     </body>
 </html>
