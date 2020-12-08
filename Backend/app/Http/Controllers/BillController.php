@@ -29,7 +29,7 @@ class BillController extends Controller
 
         $bills = Bill::query()->orderByDesc('date')->forPage($page, 8)->get();
 
-        $totalPages = ceil($countBills/8);
+        $totalPages = $countBills == 0 ? 1 : ceil($countBills/8);
 
         $previousPage = $page == 1 ? 1 : $page - 1;
         $nextPage = $page == $totalPages ? $page : $page + 1;
