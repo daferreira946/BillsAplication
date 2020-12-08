@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9762a57-0b17-4c6c-a2cb-6f7ec279f7c9" name="Default Changelist" comment="changing CorsMiddleware type">
-      <change beforePath="$PROJECT_DIR$/.idea/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/app/Http/Controllers/BillController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app/Http/Controllers/BillController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/database/factories/BillFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/database/factories/BillFactory.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +69,19 @@
       <recent name="C:\Users\T-Gamer\Desktop\web\Backend" />
     </key>
   </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/bills" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
       <method v="2" />
@@ -93,7 +105,8 @@
       <workItem from="1607378916998" duration="2347000" />
       <workItem from="1607381303357" duration="321000" />
       <workItem from="1607382167901" duration="1073000" />
-      <workItem from="1607384054344" duration="1316000" />
+      <workItem from="1607384054344" duration="1490000" />
+      <workItem from="1607387745100" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="Backend finished">
       <created>1607304499640</created>
@@ -130,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607384288642</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changing CorsMiddleware type">
+      <created>1607385546902</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607385546902</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
