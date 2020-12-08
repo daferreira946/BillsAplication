@@ -22,7 +22,11 @@ class BillController extends Controller
         $page = $request->has('page') ? $request->get('page') : 1;
 
         $countBills = Bill::all()->count();
-        $total = Bill::all()->sum('value');
+
+        $total = Bill::all()->sum(function ($bill) {
+            return $bill->type == 1 ? $bill->value * -1 : $bill->value;
+        });
+
         $bills = Bill::query()->forPage($page, 8)->get();
 
         $totalPages = ceil($countBills/8);
