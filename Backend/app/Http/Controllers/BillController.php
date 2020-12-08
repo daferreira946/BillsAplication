@@ -27,7 +27,7 @@ class BillController extends Controller
             return $bill->type == 1 ? $bill->value * -1 : $bill->value;
         });
 
-        $bills = Bill::query()->forPage($page, 8)->get();
+        $bills = Bill::query()->orderByDesc('date')->forPage($page, 8)->get();
 
         $totalPages = ceil($countBills/8);
 
@@ -35,10 +35,12 @@ class BillController extends Controller
         $nextPage = $page == $totalPages ? $page : $page + 1;
 
         return response()->json([
-            'totalPages' => $totalPages,
-            'previousPage' => $previousPage,
-            'currentPage' => $page,
-            'nextPage' => $nextPage,
+            'pages' => [
+                'totalPages' => $totalPages,
+                'previousPage' => $previousPage,
+                'currentPage' => $page,
+                'nextPage' => $nextPage,
+            ],
             'total' => $total,
             'bills' => $bills,
         ], 200);
